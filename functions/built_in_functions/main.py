@@ -5,20 +5,24 @@ products = {
     "Cherry": ["2.50", "25"],
     "Mango": ["1.75", "40"]
 }
+
+# 1. Start with an empty list for total sales
 total_sales_list = []
 
+# 2. Iterate and compute each product’s sales
 for product, values in products.items():
     price = float(values[0])
     quantity_sold = int(values[1])
     total_sales = price * quantity_sold
+
+    print(f"Total sales for {product}: ${total_sales}")
     total_sales_list.append(total_sales)
 
-total_sum =sum(total_sales_list)
+# 3. Aggregate statistics
+total_sum = sum(total_sales_list)
 min_sales = min(total_sales_list)
 max_sales = max(total_sales_list)
 
-
-print("Total sales for products:", total_sales_list)
-print("Total sum of all sales:", total_sum)
-print("Minimum Sales:", min_sales)
-print("Max Sales:", max_sales)
+print(f"\nTotal sum of all sales: ${total_sum}")
+print(f"Minimum sales: ${min_sales}")
+print(f"Maximum sales: ${max_sales}")
